@@ -9,7 +9,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Jadwal Penyuluhan</title>
+  <title>Pengajuan Jadwal</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -21,7 +21,7 @@
 </head>
 
 <body id="page-top">
-  
+
   <!-- Page Wrapper -->
   <div id="wrapper">
 
@@ -43,20 +43,20 @@
       <li class="nav-item active">
         <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>JADWAL PENYULUHAN</span></a>
+          <span>Pengajuan Jadwal</span></a>
       </li>
       <!-- Nav Item - Charts -->
       <li class="nav-item">
         <a class="nav-link" href="index2.php">
           <i class="fas fa-fw fa-chart-area"></i>
-          <span>Edit Data</span></a>
+          <span>Edit data</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
         <a class="nav-link" href="input.php">
           <i class="fas fa-fw fa-table"></i>
-          <span>PENGAJUAN JADWAL</span></a>
+          <span>Tambah Data</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
@@ -273,34 +273,45 @@
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
-
-        	<!--membuat tabel dengan field yang akan ditampilkan-->
-          <div class="container-fluid">
- 
- <center>
-   <h3>PENYULUHAN</h3>
- </center>
-
- <div class="row"> <!--membuat wrap grup kolom horizontal-->
-
-   <div class="col-md-6"> <!--membuat grid sebanyak 12-->
-     <div class="bg-primary text-center text-white">Jadwal Penyuluhan</div> <!--menampilkan banyaknya kolom-->
-     <br/>
-   </div>
-   <div class="col-md-6"> <!--membuat grid sebanyak 12-->
-     <div class="bg-primary text-center text-white">Pengajuan Jadwal</div> <!--menampilkan banyaknya kolom-->
-     <br/>
-   </div> <!--kolom yang muncul adalah 1 kolom, karena pembagian grid hanya 12-->
+        <form action="input-aksi.php" method="post">		
+		<table>
+			<tr>
+				<td>NIM</td>
+				<td><input type="text" name="nim"></td>					
+			</tr>	
+			<tr>
+				<td>Nama</td>
+				<td><input type="text" name="nama"></td>					
+			</tr>
+			<tr>
+				<td>Kelas</td>
+				<td><input type="text" name="kelas"></td>					
+			</tr>		
+			<tr>
+				<td>Alamat</td>
+				<td><input type="text" name="alamat"></td>					
+			</tr>
+			<tr>
+				<td>Jenis Kelamin (L/P)</td>
+				<td><input type="text" name="jk"></td>					
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="Simpan"></td>					
+			</tr>				
+    </table>
+    <br>
+  </form>
 	<!--membuat tabel dengan border 1-->
 	<table border="1" class="table">
 		<tr>
 		<!--kolom pada tabel-->
 			<th>No</th>
+			<th>Nim</th>
 			<th>Nama</th>
-			<th>Nama Instansi</th>
-			<th>Alamat</th>	
-			<th>Status</th>
-			<th>Tanggal Penyuluhan</th>
+			<th>kelas</th>	
+			<th>Alamat</th>
+			<th>Jenis Kelamin</th>
 			
 		</tr>
 		<?php 
@@ -323,7 +334,6 @@
 		</tr>
 		<?php } ?>
 	</table>
-
         </div>
         <!-- /.container-fluid -->
 
